@@ -20,7 +20,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">Feri Gustiadi</a>
+        <a class="navbar-brand" href="#"><i class="bi bi-person-bounding-box"></i> <b>My Portofolio</b></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -30,13 +30,13 @@
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#about">About</a>
+              <a class="nav-link active" aria-current="page" href="#about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#wifes">Wifes</a>
+              <a class="nav-link active" aria-current="page" href="#projects">Projects</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
+              <a class="nav-link active" aria-current="page" href="#contact">Contact</a>
             </li>
           </ul>
         </div>
@@ -46,9 +46,9 @@
 
     <!-- Jumbotron -->
     <section class="jumbotron text-center">
-      <img src="img/ganteng.jpg" alt="Feri Gustiadi" width="200" class="rounded-circle img-thumbnail" />
+      <img src="img/ganteng.jpg" alt="Feri Gustiadi" width="300" class="rounded-circle img-thumbnail" />
       <h1 class="display-4">Feri Gustiadi</h1>
-      <p class="lead">Pengangguran | Pejuang Tidur</p>
+      <p class="lead">Web Programmer | Pencari Kerja</p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#ffffff"
@@ -64,18 +64,20 @@
       <div class="container">
         <div class="row text-center mb-3">
           <div class="col">
-            <h2>About Me</h2>
+            <h2><b>About Me</b></h2>
           </div>
         </div>
         <div class="row justify-content-center fs-5 text-center">
           <div class="col-md-4">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis inventore consequatur molestias fugiat, quae quibusdam deleniti esse nostrum commodi earum!</p>
+            <p class="lh-sm text-start">
+              Perkenalkan nama saya Feri Gustiadi, lulusan Universitas Putra Indonesia “YPTK” Padang dengan jurusan S1 Sistem Komputer. Saya pernah bekerja di PT. Lembah Karet Padang dengan posisi Operator Produksi (Devisi Press).
+            </p>
           </div>
           <div class="col-md-4">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla earum provident necessitatibus aspernatur iste cupiditate impedit porro, quia modi ab itaque qui praesentium debitis, sed blanditiis officiis nisi, laboriosam
-              iure.
-            </p>
+            <p class="lh-sm text-start">Saya adalah orang yang pekerja keras, beroriantasi pada target, jujur, ulet dan cepat beradaptasi di lingkungan yang baru, Serta dapat bekerja secara individu maupun dengan tim.</p>
+          </div>
+          <div class="col-md-4">
+            <p class="lh-sm text-start">Saya juga dapat mengoperasikan program Microsoft Office, Perakitan dan Penginstallan Komputer, Database MySQL, Framework PHP (CodIgniter & Laravel) serta melakukan presentasi dengan baik.</p>
           </div>
         </div>
       </div>
@@ -90,11 +92,11 @@
     <!-- Akhir About -->
 
     <!-- Projects -->
-    <section id="wifes">
+    <section id="projects">
       <div class="container">
         <div class="row text-center mb-3">
           <div class="col">
-            <h2>My Wifes</h2>
+            <h2><b>My Projects</b></h2>
           </div>
         </div>
         <div class="row justify-content-center">
@@ -156,25 +158,34 @@
       <div class="container">
         <div class="row text-center mb-3">
           <div class="col">
-            <h2>Contact Me</h2>
+            <h2><b>Contact Me</b></h2>
           </div>
         </div>
         <div class="row justify-content-center">
           <div class="col-md-6">
-            <form>
+            <div class="alert alert-success alert-dismissible fade show d-none my-alert" role="alert">
+              <strong>Terima Kasih !</strong> Pesan Anda Telah Kami Terima :)
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <form name="feri-contact-form">
               <div class="mb-3">
                 <label for="name" class="form-label">Nama Lengkap</label>
-                <input type="text" class="form-control" id="name" aria-describedby="name" />
+                <input type="text" class="form-control" name="nama" id="name" aria-describedby="name" placeholder="Nama Lengkap" />
               </div>
               <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" aria-describedby="email" />
+                <input type="email" class="form-control" name="email" id="email" aria-describedby="email" placeholder="E-Mail" />
               </div>
               <div class="mb-3">
                 <label for="pesan" class="form-label">Pesan</label>
-                <textarea class="form-control" id="pesan" rows="3"></textarea>
+                <textarea class="form-control" name="pesan" id="pesan" rows="3" placeholder="Silahkan Kasih Pesan & Saran"></textarea>
               </div>
-              <button type="submit" class="btn btn-primary">Kirim</button>
+              <button type="submit" class="btn btn-outline-primary btn-kirim"><i class="bi bi-save"></i> Kirim</button>
+
+              <button class="btn btn-outline-primary btn-loading d-none" type="button" disabled>
+                <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                Loading...
+              </button>
             </form>
           </div>
         </div>
@@ -191,10 +202,64 @@
 
     <!-- Footer -->
     <footer class="bg-primary text-white text-center pb-5">
-      <p>Created with <i class="bi bi-chat-heart text-danger"></i> by <a href="https://twitter.com/oyazishirohige" class="text-white fw-bold">@feri_picaks</a></p>
+      <div class="row lh-sm text-center">
+        <div class="col-sm-4">
+          <b class="text-black-50"><i class="bi bi-house-heart-fill"></i> Address :</b> Jl.Jihad No.108 RT003/RW015 Kel.Kubu Dalam Parak Karakah Kec.Padang Timur 25126 Kota Padang, Sumatera Barat
+        </div>
+        <div class="col-sm-4">
+          <b class="text-black-50"><i class="bi bi-whatsapp"></i> Whatsapp :</b> 085274712099 / 088708206038
+        </div>
+        <div class="col-sm-4">
+          <b class="text-black-50"><i class="bi bi-envelope"></i> E-Mail :</b> ferigustiadi@gmail.com
+        </div>
+      </div>
+      <br />
+      <div class="row">
+        <div class="col">
+          <a href="https://www.facebook.com/feri.gustiadi100892" target="_blank" class="btn btn-outline-warning btn-sm"> <i class="bi bi-facebook"></i> Facebook </a>
+        </div>
+        <div class="col">
+          <a href="https://twitter.com/oyazishirohige" target="_blank" class="btn btn-outline-info btn-sm"> <i class="bi bi-twitter"></i> Twitter </a>
+        </div>
+        <div class="col">
+          <a href="https://www.instagram.com/feri_gustiadi/" target="_blank" class="btn btn-outline-danger btn-sm"> <i class="bi bi-instagram"></i> Instagram </a>
+        </div>
+      </div>
+      <br /><br />
+      <div class="row text-align-center">
+        <strong>Created with &copy; 2023 <i class="bi bi-chat-heart text-danger"></i> by <a href="#" class="text-white fw-bold">@feri_gustiadi</a></strong>
+      </div>
     </footer>
     <!-- Akhir Footer -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbzv2tCKGSv-vd35uFbeuyIXoUdVTl5_gpid1ZAqU8K7tTCNDVCqDdYSWMR5HgQv1dDjMQ/exec';
+      const form = document.forms['feri-contact-form'];
+      const btnKirim = document.querySelector('.btn-kirim');
+      const btnLoading = document.querySelector('.btn-loading');
+      const myAlert = document.querySelector('.my-alert');
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        // ketika tombol kirim diklik
+        // tampilkan tombol loading, hilangkan tombol kirim
+        btnLoading.classList.toggle('d-none');
+        btnKirim.classList.toggle('d-none');
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+          .then((response) => {
+            // tampilkan tombol kirim, hilangkan tombol loading
+            btnLoading.classList.toggle('d-none');
+            btnKirim.classList.toggle('d-none');
+            // tampilkan alert
+            myAlert.classList.toggle('d-none');
+            // reset isi formnya
+            form.reset();
+            console.log('Success!', response);
+          })
+          .catch((error) => console.error('Error!', error.message));
+      });
+    </script>
   </body>
 </html>

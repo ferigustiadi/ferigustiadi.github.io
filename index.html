@@ -133,6 +133,39 @@
         </div>
       </div>
 
+      <section id="my-keyboards">
+        <div class="container">
+          <div class="row text-center mb-3">
+            <div class="col">
+              <h2><b>My Keyboards</b></h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 col-lg-4 mb-3">
+              <div class="keyboard-box">
+                <h4 class="keyboard-name">Keychron K2</h4>
+                <img src="img/keyboards/keyboard3.png" alt="Keychron K2" class="keyboard-image" />
+                <a href="#" class="btn btn-light keyboard-detail-button">Show Details</a>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-3">
+              <div class="keyboard-box">
+                <h4 class="keyboard-name">Womier RGB</h4>
+                <img src="img/keyboards/keyboard1.png" alt="Womier RGB" class="keyboard-image" />
+                <a href="#" class="btn btn-light keyboard-detail-button">Show Details</a>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-3">
+              <div class="keyboard-box">
+                <h4 class="keyboard-name">White Dragon</h4>
+                <img src="img/keyboards/keyboard4.png" alt="White Dragon" class="keyboard-image" />
+                <a href="#" class="btn btn-light keyboard-detail-button">Show Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#ffffff"
@@ -333,6 +366,16 @@
             console.log('Success!', response);
           })
           .catch((error) => console.error('Error!', error.message));
+      });
+    </script>
+
+    <!-- Script tiltjs/animasi3D -->
+    <script type="text/javascript" src="js/vanilla-tilt.min.js"></script>
+    <script type="text/javascript">
+      VanillaTilt.init(document.querySelectorAll('.keyboard-box'), {
+        max: 35,
+        speed: 1000,
+        glare: true,
       });
     </script>
   </body>
